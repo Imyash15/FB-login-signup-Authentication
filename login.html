@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook-log in or sign up</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    
+</head>
+<body>
+    <div class="main-container" id="main-container">
+        <div class="outer-container">
+            <div class="inner-left-container">
+                <img src="img/fb.svg" alt="">
+            <p>
+                Facebook helps you connect and share with the people in your life.
+            </p>
+            </div>
+            <div class="inner-right-container">
+                <div class="form-box">
+                    <form action="/login" method="post">
+                        <input type="text" name="usermail" placeholder="Email address ">
+
+                        <input type="password" name="userpassword" placeholder="Password">
+
+                        <input type="submit" value="Log in" id="login-btn">
+                    </form>
+                    <a href="/forgotpassword.html">Forgotten password?</a>
+                    <hr>
+                    <button id="new-account-btn" onclick="createnew_btn()">Create New Account</button>
+                </div>
+                <p>
+                    <a href="#">Create a Page</a> for a celebrity, brand or buissness.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footter-content">
+            <p>
+                <a href="#"> English (UK)</a>
+                <a href="#">हिन्दी</a>
+                <a href="#">मराठी</a>
+                <a href="#">ارد</a>
+                <a href="#">ਪੰਜਾਬੀ</a>
+                <a href="#">বাংলা </a>
+                <a href="#">ગુજરાતી</a>
+                <a href="#">தமிழ்</a>
+                <a href="#">తెలుగు</a>
+                <a href="#">മലയാളം</a>
+                <a href="#">ಕನ್ನಡ</a>
+                <button id="more-lang">+</button>
+            </p>
+            <hr>
+            <p>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </p>
+        </div>
+              
+    </footer>
+    
+    <div class="signup" id="signup">
+        <form action="/register" method="post">
+            <h1>Sign Up</h1>
+            <h2>It's Quick and Easy</h2>
+            <hr>
+
+            <div class="firstname-surname">
+                <input type="text" name="firstname" placeholder="First name">
+                <input type="text" name="surname" placeholder="Surname">
+            </div>
+            <input type="text" name="usermail" placeholder="Email address" id="">
+
+            <input type="password" name="userpassword" placeholder="New Password" id="">
+
+            <div class="dob">
+                <p>Date of Birth</p>
+                <input type="date" name="userdob" placeholder="Date of Birth" id="">
+            </div>
+
+            <div class="gender">
+                <p>Gender</p>
+                <input type="text" name="usergender" placeholder="Gender" id="">
+            </div>
+            <p>
+                By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookie Policy</a> You may receive SMS notifications from us and can opt out at any time.
+            </p>
+            <input type="submit" value="Sign Up" id="signup-btn">
+        </form>
+        <button id="signup-close-btn" onclick="signup_close_btn()">x</button>
+    </div>
+
+
+    <script>
+       function createnew_btn(){
+        document.getElementById('signup').style.display="flex";
+        document.getElementById('main-container').style.filter="blur(5px)";
+        document.getElementById('footer').style.filter="blur(5px)";
+        
+       } 
+
+       function signup_close_btn(){
+        document.getElementById('signup').style.display="none";
+        document.getElementById('main-container').style.filter="blur(0px)";
+        document.getElementById('footer').style.filter="blur(0px)";
+       }
+    </script>
+    
+
+</body>
+</html>
